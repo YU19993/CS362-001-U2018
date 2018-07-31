@@ -45,7 +45,7 @@ protected void setUp() {
 //            UrlValidator.ALLOW_2_SLASHES
 //                + UrlValidator.ALLOW_ALL_SCHEMES
 //                + UrlValidator.NO_FRAGMENTS;
-//    
+//
 //        testIsValid(testUrlPartsOptions, options);
    }
 
@@ -90,7 +90,9 @@ protected void setUp() {
       if (printIndex)  {
          statusPerLine = 6;
       }
+      int see = 0;
       do {
+          see = see +1;
           StringBuilder testBuffer = new StringBuilder();
          boolean expected = true;
          for (int testPartsIndexIndex = 0; testPartsIndexIndex < testPartsIndex.length; ++testPartsIndexIndex) {
@@ -124,6 +126,9 @@ protected void setUp() {
       if (printStatus) {
          System.out.println();
       }
+      System.out.println("\n\n\n");
+      System.out.println(see);
+      System.out.println("\n\n\n");
    }
 
    public void testValidator202() {
